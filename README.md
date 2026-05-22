@@ -8,14 +8,6 @@
 
 This project implements the **binarization of a square matrix** using two parallel programming paradigms: **MPI** (Message Passing Interface) and **OpenMP** (Open Multi-Processing).
 
-Given a square matrix `A[N][N]` of `N×N` real values, the goal is to produce a binary integer matrix `T[N][N]` according to the following rule:
-
-> For each element `a_ij ∈ A`, consider its 3×3 neighborhood `A_ij[3][3]` and compute its local mean `m_ij`.
-> - If `a_ij > m_ij` → `t_ij = 1`
-> - If `a_ij ≤ m_ij` → `t_ij = 0`
-
----
-
 ## Implementations
 
 ### MPI Implementation
@@ -51,28 +43,9 @@ Performance was measured via **strong** and **weak scalability** analysis for bo
 
 ### MPI — Strong Scalability
 
-| P  | N     | T(P,N)   | Speedup     | Efficiency  |
-|----|-------|----------|-------------|-------------|
-| 1  | 10000 | 1.473569 | 1           | 1           |
-| 2  | 10000 | 0.881726 | 1.671       | 0.836       |
-| 4  | 10000 | 0.570417 | 2.583       | 0.646       |
-| 8  | 10000 | 0.456895 | 3.225       | 0.403       |
-| 16 | 10000 | 0.375618 | 3.923       | 0.245       |
-| 32 | 10000 | 0.339357 | 4.342       | 0.136       |
-| 48 | 10000 | 0.343869 | 4.285       | 0.089       |
-
 Speedup plateaus around `~4.3×` due to MPI communication overhead.
 
 ### OpenMP — Strong Scalability
-
-| P  | N     | T(P,N)   | Speedup     | Efficiency  |
-|----|-------|----------|-------------|-------------|
-| 1  | 10000 | 8.212742 | 1           | 1           |
-| 2  | 10000 | 4.114754 | 1.996       | 0.998       |
-| 8  | 10000 | 1.028794 | 7.983       | 0.998       |
-| 16 | 10000 | 0.515017 | 15.947      | 0.997       |
-| 32 | 10000 | 0.260184 | 31.565      | 0.986       |
-| 48 | 10000 | 0.177078 | 46.379      | 0.966       |
 
 Near-ideal speedup across all thread counts — efficiency consistently above 96%.
 
