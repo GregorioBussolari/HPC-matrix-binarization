@@ -1,0 +1,24 @@
+Strong Scalability Test
+Matrix size: 10000x10000
+Launching with 1 OpenMP threads
+tempo di esecuzione con 1 threads: 4.762963
+Launching with 2 OpenMP threads
+tempo di esecuzione con 2 threads: 3.164315
+Launching with 4 OpenMP threads
+tempo di esecuzione con 4 threads: 1.685385
+Launching with 8 OpenMP threads
+tempo di esecuzione con 8 threads: 1.206103
+Launching with 12 OpenMP threads
+tempo di esecuzione con 12 threads: 0.941231
+Launching with 16 OpenMP threads
+tempo di esecuzione con 16 threads: 0.884759
+Launching with 24 OpenMP threads
+tempo di esecuzione con 24 threads: 0.499314
+Launching with 28 OpenMP threads
+tempo di esecuzione con 28 threads: 0.542312
+Launching with 32 OpenMP threads
+tempo di esecuzione con 32 threads: 0.545669
+Launching with 40 OpenMP threads
+tempo di esecuzione con 40 threads: 0.364912
+Launching with 48 OpenMP threads
+tempo di esecuzione con 48 threads: 0.429212
